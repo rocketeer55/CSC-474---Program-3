@@ -8,8 +8,14 @@ uniform mat4 M;
 uniform mat4 Manim[73];
 
 void main() {
-	vec4 pos = M * Manim[vertInd] * vec4(vertPos, 1.0);
+	mat4 Ma = Manim[vertInd];
+	vec3 pos;
+	// = M * Manim[vertInd] * vec4(vertPos, 1.0);
+
+	pos.x = Ma[3][0];
+	pos.y = Ma[3][1];
+	pos.z = Ma[3][2];
 
 
-    gl_Position = P * V * pos;
+    gl_Position = P * V * M * vec4(pos, 1.0);
 }

@@ -165,6 +165,7 @@ void CalcTransRotAnim(all_animations *all_animations, FbxScene* lScene, FbxNode*
 	FbxAnimStack* currAnimStack = lScene->GetSrcObject<FbxAnimStack>(animno);
 	FbxString animStackName = currAnimStack->GetName();
 	FbxString mAnimationName = animStackName.Buffer();
+
 	FbxTakeInfo* takeInfo = lScene->GetTakeInfo(animStackName);
 	FbxTime start = takeInfo->mLocalTimeSpan.GetStart();
 	FbxTime end = takeInfo->mLocalTimeSpan.GetStop();

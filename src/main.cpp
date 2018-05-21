@@ -187,7 +187,7 @@ public:
             totaltime_untilframe_ms = 0;
             frame++;
             }
-        root->play_animation(frame,"axisneurontestfile_Avatar00");  //name of current animation 
+        root->play_animation(frame,"avatar_0_fbx_tmp");  //name of current animation 
 
 		// Clear framebuffer.
 		glClearColor(0.3f, 0.7f, 0.8f, 1.0f);
